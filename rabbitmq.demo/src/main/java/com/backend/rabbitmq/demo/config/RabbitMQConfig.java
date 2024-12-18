@@ -37,4 +37,8 @@ public class RabbitMQConfig {
                 .with(routingKey);
     }
 
+    // The following 3 beans will be autoconfigured by spring
+    // Connection Factory
+    // Rabbit Template
+    // Rabbit Admin
 }
