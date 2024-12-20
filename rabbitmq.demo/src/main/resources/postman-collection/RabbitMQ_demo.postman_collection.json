@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "48176e96-2e0a-4049-8237-17200c4ae03a",
+		"name": "Rabbit MQ by JavaGuides",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publish text",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/publish?message=hey there 01",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"publish"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "hey there 01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "publish json (User)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 123,\r\n    \"firstName\": \"Antariksh\",\r\n    \"lastName\": \"Gosain01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/publish",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
