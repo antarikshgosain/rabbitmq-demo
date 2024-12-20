@@ -28,9 +28,6 @@ public class RabbitMQJsonProducer {
 
     public void sendJsonMessage(User user) throws JsonProcessingException {
         LOGGER.info("Sending Json: " + user.toString());
-        LOGGER.info("Printing Json: " + new ObjectMapper().writeValueAsString(user));
-        LOGGER.info("Printing LONG Json: " + rabbitTemplate.getMessageConverter().fromMessage(rabbitTemplate.getMessageConverter().toMessage(user, null)));
-
         rabbitTemplate.convertAndSend(exchangeName, routingJsonKey, user);
     }
 
